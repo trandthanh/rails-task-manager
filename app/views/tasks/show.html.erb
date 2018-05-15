@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="top-div">
+        <h1><%= @task.title %></h1>
+        <%= link_to edit_task_path, class: 'btn btn-danger' do %>
+          <i class="fas fa-edit"></i> Edit this task
+        <% end %>
+      </div>
+      <div class="task-description"><p><%= @task.details %></p></div>
+      <% if @task.completed %>
+        <p><i class="far fa-check-square"></i> This task is completed</p>
+      <% else %>
+        <p><i class="far fa-square"></i> This task is not completed yet</p>
+      <% end %>
+      <hr>
+      <%= link_to "Back to list", tasks_path %>
+    </div>
+  </div>
+</div>
+
+
